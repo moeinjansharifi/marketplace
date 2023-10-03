@@ -13,6 +13,10 @@ import fs from "fs";
 
 const app = express();
 
+app.get("/favico.ico", (req, res) => {
+  res.sendStatus(404);
+});
+
 app.get("/", (req, res) => {
   res.send("API is running....");
 });
