@@ -14,7 +14,7 @@ import Account from "./pages/Account";
 import AddNewPlace from "./pages/AddNewPlace";
 import EditPlace from "./pages/EditPlace";
 
-axios.defaults.baseURL = "http://localhost:5000/api/v1";
+axios.defaults.baseURL = "https://marketplace-xi-five.vercel.app/api/v1";
 
 const App = () => {
   const dispatch = useDispatch();
