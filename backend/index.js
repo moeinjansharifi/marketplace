@@ -11,19 +11,11 @@ import bookingRoutes from "./routers/bookingRoutes.js";
 import multer from "multer";
 import fs from "fs";
 
-const app = express();
-
-app.get("/favico.ico", (req, res) => {
-  res.sendStatus(404);
-});
-
-app.get("/", (req, res) => {
-  res.send("API is running....");
-});
-
 dotenv.config();
 
 connectDB();
+
+const app = express();
 
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
@@ -34,7 +26,7 @@ app.get("/", (req, res) => {
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://marketplace-frontend-puce.vercel.app",
   })
 );
 
